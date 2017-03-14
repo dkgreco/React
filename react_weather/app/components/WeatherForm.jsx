@@ -1,6 +1,7 @@
 const React = require('react');
 
-let WeatherForm = React.createClass({
+let WeatherForm;
+WeatherForm = React.createClass({
     onFormSubmit: function(e) {
         e.preventDefault();
 
@@ -14,10 +15,9 @@ let WeatherForm = React.createClass({
     render: function() {
         return (
             <div>
-                <h3>WeatherForm Component</h3>
                 <form onSubmit={this.onFormSubmit}>
-                    <input type="text" ref="city" placeholder="city"/>
-                    <button type="submit">Fetch Weather</button>
+                    <input type="search" ref="city" placeholder="Search Weather By City"/>
+                    <button type="submit" className="button hollow expanded">Fetch Weather</button>
                 </form>
             </div>
         )

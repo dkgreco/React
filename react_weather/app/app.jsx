@@ -6,6 +6,12 @@ const React = require('react'),
     About = require('About'),
     Examples = require('Examples');
 
+//Load Foundation and Custom CSS
+require('style!css!foundation-sites/dist/foundation.min.css');
+require('style!css!sass!applicationStyles');
+
+$('document').foundation();
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
