@@ -1,4 +1,5 @@
-let webpack = require('webpack');
+let webpack = require('webpack'),
+    path = require('path');
 
 module.exports = {
     entry: [
@@ -44,6 +45,17 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/
             }
         ]
+    },
+    sassLoader: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            }
+        ],
+        includePaths: [
+          path.resolve(__dirname, './node_modules/foundation-sites/scss/util')
+      ]
     },
     devtool: 'cheap-module-eval-source-map'
 };

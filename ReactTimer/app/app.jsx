@@ -6,9 +6,7 @@ const React = require('react'),
     Countdown = require('Countdown');
 
 //Load Foundation and Custom CSS
-require('style!css!foundation-sites/dist/foundation.min.css');
 require('style!css!sass!applicationStyles');
-
 $('document').foundation();
 
 ReactDOM.render(
